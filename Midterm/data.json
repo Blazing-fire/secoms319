@@ -1,0 +1,101 @@
+{
+    "movies": [
+        {
+            "movieId": "1",
+            "title": "Iron Man",
+            "year": 2008,
+            "rating": 5,
+            "url": "https://freepngimg.com/thumb/iron_man/155559-man-infinity-war-iron-marvel.png",
+            "description": "A billionaire industrialist and genius inventor, Tony Stark (Robert Downey Jr.), is conducting weapons tests overseas, but terrorists kidnap him to force him to build a devastating weapon. Instead, he builds an armored suit and upends his captors."
+        },
+        {
+            "movieId": "2",
+            "title": "Avengers",
+            "year": 2012,
+            "rating": 4,
+            "url": "https://freepngimg.com/thumb/avengers/24403-2-avengers-transparent-background.png",
+            "description": "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity."
+        },
+        {
+            "movieId": "3",
+            "title": "Captin America: The First Avenger",
+            "year": 2011,
+            "rating": 4,
+            "url": "https://freepngimg.com/thumb/captain_america/10-2-captain-america-png-picture.png",
+            "description": "Steve Rogers (Chris Evans) wants to do his part and join America's armed forces, but the military rejects him because of his small stature. Finally, Steve gets his chance when he is accepted into an experimental program that turns him into a supersoldier called Captain America."
+        },
+        {
+            "movieId": "4",
+            "title": "X-Men",
+            "year": 2000,
+            "rating": 3,
+            "url": "https://freepngimg.com/thumb/xmen/26256-4-x-men-photos.png",
+            "description": "In a world where mutants (evolved super-powered humans) exist and are discriminated against, two groups form for an inevitable clash: the supremacist Brotherhood, and the pacifist X-Men."
+        },
+        {
+            "movieId": "5",
+            "title": "The Lego Movie",
+            "year": 2014,
+            "rating": 4,
+            "url": "https://freepngimg.com/thumb/the_lego_movie/23406-6-the-lego-movie-transparent-image.png",
+            "description": "The LEGO Movie is a 3D animated film which follows lead character, Emmet a completely ordinary LEGO mini-figure who is identified as the most 'extraordinary person' and the key to saving the Lego universe. Emmet and his friends go on an epic journey to stop the evil tyrant, Lord Business."
+        },
+        {
+            "movieId": "6",
+            "title": "The Incredibles",
+            "year": 2012,
+            "rating": 4,
+            "url": "https://freepngimg.com/thumb/the_incredibles/29883-9-the-incredibles-image.png",
+            "description": "Set in a retro-futuristic version of the 1960s, the film follows Bob and Helen Parr, a couple of superheroes, known as Mr. Incredible and Elastigirl, respectively, who hide their powers in accordance with a government mandate, and attempt to live a quiet suburban life with their three children."
+        },
+        {
+            "movieId": "7",
+            "title": "The Lion King",
+            "year": 1994,
+            "rating": 5,
+            "url": "https://freepngimg.com/thumb/the_lion_king/29526-2-the-lion-king-picture.png",
+            "description": "Disney's The Lion King is about a young lion prince named Simba who, after losing his father in a staged accident which he feels he caused, must face his fear of responsibility and take his rightful place on the throne."
+        },
+        {
+            "movieId": "8",
+            "title": "The Boss Baby",
+            "year": 2017,
+            "rating": 3,
+            "url": "https://freepngimg.com/thumb/the_boss_baby/29414-7-the-boss-baby-transparent-background.png",
+            "description": "A suit-wearing, briefcase-carrying baby pairs up with his 7-year old brother to stop the dastardly plot of the CEO of Puppy Co. Tim Templeton has the most amazingly perfect life ever. With his loving parents to himself he doesn't realize his mother is pregnant."
+        },
+        {
+            "movieId": "9",
+            "title": "The Dark Knight",
+            "year": 2008,
+            "rating": 5,
+            "url": "https://freepngimg.com/thumb/batman/4-2-batman-dark-knight-logo-png.png",
+            "description": "The plot follows the vigilante Batman, police lieutenant James Gordon, and district attorney Harvey Dent, who form an alliance to dismantle organized crime in Gotham City. Their efforts are derailed by the Joker, an anarchistic mastermind who seeks to test how far the Batman will go to save the city from chaos."
+        },
+        {
+            "movieId": "10",
+            "title": "Batman v Superman",
+            "year": 2016,
+            "rating": 3,
+            "url": "https://freepngimg.com/thumb/batman_v_superman/30049-8-batman-vs-superman-transparent.png",
+            "description": "Batman is manipulated by Lex Luthor to fear Superman. Superman´s existence is meanwhile dividing the world and he is framed for murder during an international crisis. The heroes clash and force the neutral Wonder Woman to reemerge."
+        },
+        {
+            "movieId": "11",
+            "title": "Green Lantern",
+            "year": 2011,
+            "rating": 1,
+            "url": "https://freepngimg.com/thumb/the_green_lantern/20888-8-the-green-lantern-photos.png",
+            "description": "The film tells the story of Hal Jordan, a test pilot who is selected to become the first human member of an intergalactic police force called the Green Lantern Corps; he is given a ring that grants him superpowers, and must confront Parallax, a being who threatens to upset the balance of power in the universe, while a new threat rises back on Earth."
+        },
+        {
+            "movieId": "12",
+            "title": "Man of Steel",
+            "year": 2013,
+            "rating": 4,
+            "url": "https://freepngimg.com/thumb/superman/21474-9-superman-logo-file.png",
+            "description": "An alien child is evacuated from his dying world and sent to Earth to live among humans. His peace is threatened when other survivors of his home planet invade Earth. Kal-El, son of Jor-El and Lara, is sent to Earth after his home planet Krypton leads to a complete incineration."
+        }
+
+    ]
+  }
