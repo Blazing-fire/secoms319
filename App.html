@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Method GET</title>
+</head>
+<body>
+  <h1>Get Method.</h1>
+  <button onclick="getMethod()">Show All Robots</button>
+  <hr>
+  <h1>Get Method .</h1>
+  <button onclick="getMethodById('1')">Show robot 1</button>
+  <button onclick="getMethodById('2')">Show robot 2</button>
+  <button onclick="getMethodById('3')">Show robot 3</button>
+  <h1>Output:</h1>
+  <pre id="showData"></pre>
+  <div id="goodmovies"></div>
+  <script>
+    function getMethod() {
+      fetch('http://localhost:8081/listRobots')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          var container = document.getElementById("showData");
+          container.innerHTML = JSON.stringify(data, undefined, 2);
+          loadRobots(data);
+        });
+    }
+
+    function loadRobots(myRobots) {
+      var mainContainer = document.getElementById("goodmovies");
+      for (var i = 0; i < myRobots.length; i++) {
+        let name = myRobots[i].name;
+        let price = myRobots[i].price;
+        let description = myRobots[i].description;
+        let imageUrl = myRobots[i].imageUrl;
+        let div = document.createElement("div");
+        div.innerHTML = `
+          <h3>${name}</h3>
+          ${price} <br>
+          ${description} <br>
+          <img src=${imageUrl} width="200"> <br> <br>
+        `;
+        mainContainer.appendChild(div);
+        console.log(div);
+      }
+    }
+
+    function getMethodById(id) {
+        fetch('http://localhost:8081/' + id)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                var container = document.getElementById("showData");
+                container.innerHTML = JSON.stringify(data,undefined,2);
+            });
+    };
+    
+  </script>
+</body>
+</html>
