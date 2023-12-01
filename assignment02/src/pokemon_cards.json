@@ -1,0 +1,66 @@
+[
+    {
+      "cardID" : "SV01-086",
+      "cardName" : "Gardevoir ex",
+      "set" : "SV01",
+      "collectionNumber" : "086",
+      "price" : 0.91,
+      "cardImage" : "https://www.pokemon.com/static-assets/content-assets/cms2/img/cards/web/SV01/SV01_EN_86.png"
+    },
+    {
+        "cardID" : "SWSH06-061",
+        "cardName" : "Gardevoir",
+        "set" : "SWSH06",
+        "collectionNumber" : "061",
+        "price" : 1.24,
+        "cardImage" : "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH6/SWSH6_EN_61.png"
+    },
+    {
+        "cardID" : "CLB-016",
+        "cardName" : "Zacian V",
+        "set" : "CLB",
+        "collectionNumber" : "016",
+        "price" : 0.25,
+        "cardImage" : "https://assets.pokemon.com/assets/cms2/img/cards/web/CEL/CEL_EN_16.png"
+    },
+    {
+        "cardID" : "CLB-011",
+        "cardName" : "Mew",
+        "set" : "CLB",
+        "collectionNumber" : "011",
+        "price" : 0.28,
+        "cardImage" : "https://assets.pokemon.com/assets/cms2/img/cards/web/CEL/CEL_EN_11.png"
+    },
+    {
+        "cardID" : "SWSH10-046",
+        "cardName" : "Radiant Greninja",
+        "set" : "SWSH10",
+        "collectionNumber" : "046",
+        "price" : 2.95,
+        "cardImage" : "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH10/SWSH10_EN_46.png"
+    },
+    {
+        "cardID" : "SWSH11-074",
+        "cardName" : "Cresselia",
+        "set" : "SWSH11",
+        "collectionNumber" : "074",
+        "price" : 0.99,
+        "cardImage" : "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH11/SWSH11_EN_74.png"
+    },
+    {
+        "cardID" : "SWSH09-041",
+        "cardName" : "Manaphy",
+        "set" : "SWSH09",
+        "collectionNumber" : "041",
+        "price" : 0.34,
+        "cardImage" : "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH9/SWSH9_EN_41.png"
+    },
+    {
+        "cardID" : "SV02-192",
+        "cardName" : "Reversal Energy",
+        "set" : "SV02",
+        "collectionNumber" : "192",
+        "price" : 0.24,
+        "cardImage" : "https://assets.pokemon.com/assets/cms2/img/cards/web/SV02/SV02_EN_192.png"
+    }
+  ]
