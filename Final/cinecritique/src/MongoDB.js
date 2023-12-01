@@ -15,12 +15,12 @@ const dbName = "reactdata";
 const client = new MongoClient(url);
 const db = client.db(dbName);
 
-app.get("/listRobots", async (req, res) => {
+app.get("/Movies", async (req, res) => {
     await client.connect();
     console.log("Node connected successfully to GET MongoDB");
     const query = {};
     const results = await db
-        .collection("robots")
+        .collection("Movies")
         .find(query)
         .limit(100)
         .toArray();
@@ -31,13 +31,13 @@ app.get("/listRobots", async (req, res) => {
 
 app.get("/:id", async (req, res) => {
     const robotid = Number(req.params.id);
-    console.log("Robot to find :", robotid);
+    console.log("Movie to find :", movieid);
 
     await client.connect();
     console.log("Node connected successfully to GET-id MongoDB");
-    const query = {"id": robotid };
+    const query = {"id": movieid };
 
-    const results = await db.collection("robots")
+    const results = await db.collection("Movies")
     .findOne(query);
     
     console.log("Results :", results);

@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.main-view {
+  text-align: center;
+}
+
+.movies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.movie-item {
+  width: 45%; /* Adjust as needed */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.movie-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.movie-details {
+  margin-top: 10px;
+}

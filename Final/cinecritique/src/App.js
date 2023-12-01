@@ -1,47 +1,81 @@
 import logo from './logo.svg';
 import './App.css';
 
-// App.js
-import React from 'react';
+// Import other necessary modules
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { MongoClient, ObjectId } from 'mongodb';
+import React, { useEffect, useState } from 'react'; // Import React and necessary hooks
 
+// MongoDB connection details
+const url = 'mongodb://localhost:27017';
+const dbName = 'reactdata';
+const client = new MongoClient(url);
 
+// MainView component
 const MainView = () => {
-  const [movies, setMovies] = React.useState([]);
+  const [movies, setMovies] = useState([]); // Use the useState hook
 
-  React.useEffect(() => {
-    axios.get('mongodb://localhost:27017/movies')
-      .then(response => setMovies(response.data))
-      .catch(error => console.error(error));
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        await client.connect();
+        const db = client.db(dbName);
+        const moviesCollection = db.collection('Movies');
+
+        const result = await moviesCollection.find().limit(100).toArray();
+        setMovies(result);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        await client.close();
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
-    <div>
+    <div className="main-view">
       <h2>Main View</h2>
-      {movies.map(movie => (
-        <div key={movie._id}>
-          <a href={`/movie/${movie._id}`}>
-            <h3>{movie.title}</h3>
-          </a>
-          <p>Rating: {movie.rating}</p>
-          <p>Description: {movie.description}</p>
-        </div>
-      ))}
+      <div className="movies-grid">
+        {movies.map(movie => (
+          <div key={movie._id} className="movie-item">
+            <img src={movie.url} alt={`Poster for ${movie.title}`} />
+            <div className="movie-details">
+              <h3>{movie.title}, {movie.year}</h3>
+              <p>Rating: {movie.rating}</p>
+              <p>{movie.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
+// MoviePage component
 const MoviePage = ({ match }) => {
   const [movie, setMovie] = React.useState(null);
   const [reviews, setReviews] = React.useState([]);
 
   React.useEffect(() => {
-    axios.get(`http://localhost:5000/movie/${match.params.id}`)
-      .then(response => {
-        setMovie(response.data);
-        setReviews(response.data.reviews);
-      })
-      .catch(error => console.error(error));
+    const fetchData = async () => {
+      try {
+        await client.connect();
+        const db = client.db(dbName);
+        const moviesCollection = db.collection('Movies');
+
+        const result = await moviesCollection.findOne({ _id: new ObjectId(match.params.id) });
+        setMovie(result);
+        setReviews(result.reviews || []);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        await client.close();
+      }
+    };
+
+    fetchData();
   }, [match.params.id]);
 
   return (
@@ -66,22 +100,32 @@ const MoviePage = ({ match }) => {
   );
 };
 
+// MakeReviewPage component
 const MakeReviewPage = ({ match }) => {
   const [name, setName] = React.useState('');
   const [rating, setRating] = React.useState('');
   const [comment, setComment] = React.useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const newReview = { name, rating, comment };
+    try {
+      await client.connect();
+      const db = client.db(dbName);
+      const moviesCollection = db.collection('Movies');
 
-    axios.post(`http://localhost:5000/movie/${match.params.id}/review/${match.params.reviewId}`, newReview)
-      .then(response => {
-        // Handle success, maybe redirect to MoviePage
-        console.log(response.data);
-      })
-      .catch(error => console.error(error));
+      const newReview = { name, rating, comment };
+      const result = await moviesCollection.updateOne(
+        { _id: new ObjectId(match.params.id), 'reviews._id': new ObjectId(match.params.reviewId) },
+        { $push: { 'reviews.$.comments': newReview } }
+      );
+
+      console.log(result);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      await client.close();
+    }
   };
 
   return (
